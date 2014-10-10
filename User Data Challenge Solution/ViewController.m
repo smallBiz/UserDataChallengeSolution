@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "UDUserData.h"
 
 @interface ViewController ()
-
+@property (strong,nonatomic) NSArray *users;
 @end
 
 @implementation ViewController
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.users = [UDUserData users];
+    NSLog(@"%@",self.users);
 }
 
 - (void)didReceiveMemoryWarning {
